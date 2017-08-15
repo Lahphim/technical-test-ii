@@ -67,6 +67,9 @@ body {
   font-size: 14px;
   background-color: #F4F7F8; }
 
+#content-pane {
+  margin: 34px; }
+
 #sidebar-pane {
   position: relative;
   background-color: #6F2781;
@@ -149,3 +152,21 @@ body {
       width: 6px;
       height: 40px;
       border-radius: 0 4px 4px 0; }
+
+.breadcrumb {
+  margin-top: 50px; }
+  .breadcrumb a {
+    color: #6C5E73;
+    opacity: 0.2;
+    padding: 0.5em 0.4em; }
+  .breadcrumb li:first-child a {
+    padding-left: 0; }
+  .breadcrumb li.is-active a {
+    color: #6C5E73;
+    opacity: 1; }
+  .breadcrumb li + li::before {
+    color: #6C5E73;
+    opacity: 0.2; }
+  .breadcrumb.is-large {
+    font-family: "Montserrat Light";
+    font-size: 24px; }

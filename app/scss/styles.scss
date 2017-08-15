@@ -6,4 +6,9 @@ body {
   background-color: #F4F7F8;
 }
 
+#content-pane {
+  margin: 34px;
+}
+
 @import "sidebar";
+@import "breadcrumb";
