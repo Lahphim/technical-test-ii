@@ -1,0 +1,16 @@
+{
+  "name": "technical-test-ii",
+  "version": "1.0.0",
+  "description": "Nimbl3 : Offline Test",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lahphim/technical-test-ii.git"
+  },
+  "author": "Somsak Arnon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lahphim/technical-test-ii/issues"
+  },
+  "homepage": "https://github.com/Lahphim/technical-test-ii#readme"
+}
