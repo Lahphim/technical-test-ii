@@ -1,7 +1,9 @@
-.fatty {
-  width: percentage(6/7);
+@import "font-face";
+
+body {
+  font-family: "Montserrat Regular";
+  font-size: 14px;
+  background-color: #F4F7F8;
 }
 
-h1 {
-  color: red;
-}
+@import "sidebar";
