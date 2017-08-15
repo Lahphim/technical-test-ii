@@ -1,5 +1,151 @@
-.fatty {
-  width: 85.71429%; }
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("../font/Montserrat-Regular.eot");
+  src: url("../font/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Montserrat-Regular.woff") format("woff"), url("../font/Montserrat-Regular.ttf") format("truetype"), url("../font/Montserrat-Regular.svg#Montserrat Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
 
-h1 {
-  color: red; }
+@font-face {
+  font-family: "Montserrat Light";
+  src: url("../font/Montserrat-Light.eot");
+  src: url("../font/Montserrat-Light.eot?#iefix") format("embedded-opentype"), url("../font/Montserrat-Light.woff") format("woff"), url("../font/Montserrat-Light.ttf") format("truetype"), url("../font/Montserrat-Light.svg#Montserrat Light") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-family: "Montserrat UltraLight";
+  src: url("../font/Montserrat-UltraLight.eot");
+  src: url("../font/Montserrat-UltraLight.eot?#iefix") format("embedded-opentype"), url("../font/Montserrat-UltraLight.woff") format("woff"), url("../font/Montserrat-UltraLight.ttf") format("truetype"), url("../font/Montserrat-UltraLight.svg#Montserrat UltraLight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-family: "Montserrat Hairline";
+  src: url("../font/Montserrat-Hairline.eot");
+  src: url("../font/Montserrat-Hairline.eot?#iefix") format("embedded-opentype"), url("../font/Montserrat-Hairline.woff") format("woff"), url("../font/Montserrat-Hairline.ttf") format("truetype"), url("../font/Montserrat-Hairline.svg#Montserrat Hairline") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-family: "Montserrat Black";
+  src: url("../font/Montserrat-Black.eot");
+  src: url("../font/Montserrat-Black.eot?#iefix") format("embedded-opentype"), url("../font/Montserrat-Black.woff") format("woff"), url("../font/Montserrat-Black.ttf") format("truetype"), url("../font/Montserrat-Black.svg#Montserrat Black") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("../font/Montserrat-Bold.eot");
+  src: url("../font/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../font/Montserrat-Bold.woff") format("woff"), url("../font/Montserrat-Bold.ttf") format("truetype"), url("../font/Montserrat-Bold.svg#Montserrat Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-family: "Montserrat SemiBold";
+  src: url("../font/Montserrat-SemiBold.eot");
+  src: url("../font/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../font/Montserrat-SemiBold.woff") format("woff"), url("../font/Montserrat-SemiBold.ttf") format("truetype"), url("../font/Montserrat-SemiBold.svg#Montserrat SemiBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-family: "Montserrat ExtraBold";
+  src: url("../font/Montserrat-ExtraBold.eot");
+  src: url("../font/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../font/Montserrat-ExtraBold.woff") format("woff"), url("../font/Montserrat-ExtraBold.ttf") format("truetype"), url("../font/Montserrat-ExtraBold.svg#Montserrat ExtraBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
+
+body {
+  font-family: "Montserrat Regular";
+  font-size: 14px;
+  background-color: #F4F7F8; }
+
+#sidebar-pane {
+  position: relative;
+  background-color: #6F2781;
+  padding-bottom: 115px; }
+  #sidebar-pane .menu-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 70px;
+    background-color: #4C1367; }
+  #sidebar-pane .powerby-logo {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 28px;
+    padding-bottom: 22px; }
+    #sidebar-pane .powerby-logo span {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9); }
+
+#sidebar-list .sidebar-list-item .icon {
+  -webkit-transform: scale(0.53125);
+  transform: scale(0.53125); }
+
+#sidebar-list .sidebar-list-item .list-label {
+  padding-left: 14px; }
+
+#sidebar-list .sidebar-list-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  font-size: 14px;
+  color: #D18EE2;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border-radius: 0;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s; }
+  #sidebar-list .sidebar-list-item a .icon:nth-child(2) {
+    display: none; }
+  #sidebar-list .sidebar-list-item a .icon:nth-child(4) {
+    position: absolute;
+    right: 0;
+    -webkit-transform: scale(0.375);
+    transform: scale(0.375); }
+  #sidebar-list .sidebar-list-item a.is-active {
+    color: white;
+    background-color: #5C1F73;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #4C1367, inset 0px -1px 0px 0px #4C1367;
+    box-shadow: inset 0px 1px 0px 0px #4C1367, inset 0px -1px 0px 0px #4C1367; }
+    #sidebar-list .sidebar-list-item a.is-active .icon:first-child {
+      display: none; }
+    #sidebar-list .sidebar-list-item a.is-active .icon:nth-child(2) {
+      display: block; }
+    #sidebar-list .sidebar-list-item a.is-active:before {
+      content: " ";
+      position: absolute;
+      background: #65B32E;
+      left: 0;
+      width: 6px;
+      height: 40px;
+      border-radius: 0 4px 4px 0; }

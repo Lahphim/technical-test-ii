@@ -1,0 +1,89 @@
+$panel-color: #6F2781;
+$panel-font-color: #D18EE2;
+
+$logo-bg: #4C1367;
+
+$list-active-color: white;
+$list-active-bg: #5C1F73;
+$list-active-border: #4C1367;
+$list-active-bar: #65B32E;
+
+
+
+#sidebar-pane {
+  position: relative;
+  background-color: $panel-color;
+  padding-bottom: 115px;
+
+  .menu-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    background-color: $logo-bg;
+  }
+
+  .powerby-logo {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 28px;
+    padding-bottom: 22px;
+
+    span { transform: scale(0.9); }
+  }
+}
+
+#sidebar-list {
+  .sidebar-list-item {
+    .icon {
+      transform: scale((17/32));
+    }
+
+    .list-label { padding-left: 14px; }
+
+    a {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      font-weight: 600;
+      font-size: 14px;
+      color: $panel-font-color;
+      padding-top: 17px;
+      padding-bottom: 17px;
+      border-radius: 0;
+      transition: background-color 0.2s;
+
+      .icon:nth-child(2) { display: none; }
+      .icon:nth-child(4) {
+        position: absolute;
+        right: 0;
+        transform: scale((12/32));
+      }
+
+      &.is-active {
+        .icon:first-child { display: none; }
+        .icon:nth-child(2) { display: block; }
+
+        color: $list-active-color;
+        background-color: $list-active-bg;
+        box-shadow: inset 0px 1px 0px 0px $list-active-border,
+                    inset 0px -1px 0px 0px $list-active-border;
+
+        &:before {
+          content: " ";
+          position: absolute;
+          background: $list-active-bar;
+          left: 0;
+          width: 6px;
+          height: 40px;
+          border-radius: 0 4px 4px 0;
+        }
+      }
+    }
+  }
+}
