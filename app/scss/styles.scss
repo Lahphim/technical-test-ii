@@ -6,9 +6,18 @@ body {
   background-color: #F4F7F8;
 }
 
+h3 {
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 7px;
+}
+
 #content-pane {
   margin: 34px;
 }
 
 @import "sidebar";
 @import "breadcrumb";
+@import "box";
+@import "button";
+@import "order-table";

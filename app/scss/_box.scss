@@ -1,0 +1,11 @@
+$box-text-color: #8899AA;
+$box-border-color: #D8D8D8;
+
+.box {
+  font-size: 11px;
+  color: $box-text-color;
+  box-shadow: none;
+  padding: 19px;
+  border: 1px solid $box-border-color;
+  border-radius: 3px;
+}

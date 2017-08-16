@@ -1,0 +1,21 @@
+$table-hr-color: #626272;
+$table-text-color: #8899AA;
+
+#order-list {
+  margin-bottom: 0;
+  font-size: 11px;
+  color: $table-text-color;
+
+  &.table {
+    th {
+      font-family: "Montserrat Bold";
+      font-size: 8px;
+      text-transform: uppercase;
+    }
+    th,td {
+      padding: 20px 18px;
+      line-height: initial;
+    }
+  }
+}
+

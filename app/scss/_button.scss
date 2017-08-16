@@ -1,0 +1,36 @@
+$main-bg-btn-color: #8899AA;
+$main-font-btn-color: #FBFBFB;
+
+//.action-btn-group {
+//  position: absolute;
+//  right: 0;
+//}
+
+.button {
+  &.is-action-btn {
+    padding: 13px 19px;
+    border-radius: 5px;
+    font-size: 14px;
+    height: auto;
+    transition: background-color 0.3s;
+  }
+
+  &.is-trans-btn {
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover { text-decoration: underline; }
+  }
+
+  &.is-solid-btn {
+    background-color: $main-bg-btn-color;
+    border-color: $main-bg-btn-color;
+    color: $main-font-btn-color;
+
+    &:hover {
+      background-color: transparent;
+      text-decoration: underline;
+      color: inherit;
+    }
+  }
+}
