@@ -1,5 +1,10 @@
 $table-hr-color: #626272;
 $table-text-color: #8899AA;
+$table-text-strong-color: #64707C;
+$table-text-action-color: #626272;
+$table-text-red-color: #CD171A;
+$table-border-color: #C9C9C9;
+$arrow-color: #C9C9C9;
 
 #order-list {
   margin-bottom: 0;
@@ -7,15 +12,52 @@ $table-text-color: #8899AA;
   color: $table-text-color;
 
   &.table {
+    border-radius: 3px;
+
     th {
       font-family: "Montserrat Bold";
       font-size: 8px;
       text-transform: uppercase;
+      border-width: 0 0 1px;
     }
     th,td {
+      border-color: $table-border-color;
       padding: 20px 18px;
       line-height: initial;
     }
   }
 }
 
+table {
+  .triangle-arrow-down {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    margin-left: 6px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid $arrow-color;
+  }
+
+  .tb-label-strong {
+    color: $table-text-strong-color;
+    font-weight: bold;
+  }
+  .tb-label-action {
+    color: $table-text-action-color;
+    text-decoration: underline;
+
+    &:hover, &:active { font-weight: bold; }
+  }
+  .tb-label-red {
+    color: $table-text-red-color;
+  }
+  .tb-icon-action {
+    position: absolute;
+    display: inline-block;
+    margin-top: -10px;
+    transform: scale((16/32));
+  }
+}
