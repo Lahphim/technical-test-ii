@@ -189,8 +189,8 @@
   background-position: -240px -96px;
 }
 .nimbl3-icon_plus {
-  width: 32px;
-  height: 32px;
+  width: 32px !important;
+  height: 32px !important;
   background-position: -288px -96px;
 }
 .nimbl3-icon_twitter {

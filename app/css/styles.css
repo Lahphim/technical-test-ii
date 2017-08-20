@@ -185,6 +185,13 @@ h3 {
   border: 1px solid #D8D8D8;
   border-radius: 3px; }
 
+.button span[class*="nimbl3-"] {
+  -webkit-transform: scale(0.625);
+  transform: scale(0.625); }
+
+.button.bt-label-gray {
+  color: #8899AA; }
+
 .button.is-action-btn {
   padding: 13px 19px;
   border-radius: 5px;

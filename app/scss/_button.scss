@@ -1,12 +1,20 @@
 $main-bg-btn-color: #8899AA;
 $main-font-btn-color: #FBFBFB;
 
+$button-text-gray-color: #8899AA;
+
 //.action-btn-group {
 //  position: absolute;
 //  right: 0;
 //}
 
 .button {
+  span[class*="nimbl3-"] {
+    transform: scale((20/32));
+  }
+
+  &.bt-label-gray { color: $button-text-gray-color; }
+
   &.is-action-btn {
     padding: 13px 19px;
     border-radius: 5px;
