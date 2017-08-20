@@ -1,0 +1,86 @@
+$form-label-color: #626272;
+$form-text-color: #8899AA;
+$form-input-border-color: #8899AA;
+$form-input-value-color: #C9C9C9;
+
+.label {
+  color: $form-label-color;
+}
+
+.field-body {
+  .field-text {
+    color: $form-text-color;
+    font-size: 12px;
+
+    &.is-normal {
+      font-size: 12px;
+    }
+    &.is-large {
+      font-size: 18px;
+      font-weight: bold;
+      color: $form-label-color;
+    }
+  }
+}
+
+.field-label {
+  &.is-medium {
+    font-size: 14px;
+  }
+}
+
+.input, .textarea {
+  padding: 8px 16px;
+  font-size: 11px;
+  height: 1.8rem;
+  text-align: center;
+  border-color: $form-input-border-color;
+  color: $form-input-value-color;
+
+  &:focus {
+    border-color: $form-input-border-color;
+  }
+}
+
+.spacing-area {
+  height: 200px;
+}
+
+#price-summarize-container {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  margin-right: 34px;
+  margin-bottom: 34px;
+  border: 0;
+  box-shadow: 0 2px 14px 0 rgba(black, 0.12);
+
+  .label { text-align: left; }
+
+  input {
+    &.is-short-length {
+      width: 30px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
+  .field-label {
+    flex-grow: 4;
+  }
+
+  .field-body {
+    flex-grow: 3;
+  }
+
+  .summarize-line {
+    .field-label {
+      flex-grow: 2;
+    }
+
+    .field-body {
+      flex-grow: 4;
+    }
+  }
+}
