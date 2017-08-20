@@ -1,0 +1,32 @@
+$lv-label-color: #626272;
+$lv-separator-color: #ADB3B9;
+
+#filter-container {
+  .level, .level-left {
+    .level-item {
+      position: relative;
+      .headline {
+        color: $lv-label-color;
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
+
+      .headline-big {
+        color: $lv-label-color;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      &:before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        background: rgba($lv-separator-color, 0.2);
+        width: 1px;
+        height: 100%;
+      }
+
+      &:first-child:before { display: none; }
+    }
+  }
+}

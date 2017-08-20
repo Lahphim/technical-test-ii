@@ -3,6 +3,9 @@ $form-text-color: #8899AA;
 $form-input-border-color: #8899AA;
 $form-input-value-color: #C9C9C9;
 
+$form-select-border-color: #C9C9C9;
+$form-select-value-color: #8899AA;
+
 .label {
   color: $form-label-color;
 }
@@ -36,9 +39,29 @@ $form-input-value-color: #C9C9C9;
   text-align: center;
   border-color: $form-input-border-color;
   color: $form-input-value-color;
+  box-shadow: none;
 
   &:focus {
     border-color: $form-input-border-color;
+  }
+}
+
+.select {
+  select {
+    padding: 8px 16px;
+    font-size: 11px;
+    height: 2rem;
+    border-color: $form-select-border-color;
+    color: $form-select-value-color;
+  }
+
+  &:not(.is-multiple)::after {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid $form-select-border-color;
+    border-bottom: 0;
+    margin-top: 2px;
+    transform: rotate(0deg);
   }
 }
 
