@@ -11,6 +11,7 @@
 <body>
 
 <div id="app-container" class="columns is-gapless is-marginless">
+  <!-- sidebar section -->
   <aside id="sidebar-pane" class="menu column is-2">
     <div class="menu-logo">
       <span class="icon nimbl3-logo-white"></span>
@@ -99,6 +100,7 @@
   </aside>
 
   <div id="content-pane" class="container column">
+    <!-- order breadcrumb section -->
     <nav class="breadcrumb is-large" aria-label="breadcrumbs">
       <ul>
         <li>
@@ -110,6 +112,7 @@
       </ul>
     </nav>
 
+    <!-- order detail section -->
     <div class="columns">
       <div class="column is-8">
         <div class="box">
@@ -132,11 +135,20 @@
       </div>
     </div>
 
+    <!-- add product action section -->
+    <div class="box is-paddingless">
+      <a class="button is-action-btn is-trans-btn bt-label-gray" href="javascript:;">
+        <span class="icon nimbl3-icon_plus"></span>
+        <span>Add Products</span>
+      </a>
+    </div>
+
+    <!-- order list table -->
     <div class="box is-paddingless">
       <table id="order-list" class="table is-striped is-fullwidth">
         <thead>
           <tr>
-            <th>sku</th>
+            <th>sku <span class="triangle-arrow-down"></span></th>
             <th>description</th>
             <th>brand</th>
             <th>list price</th>
@@ -149,45 +161,165 @@
         </thead>
         <tbody>
           <tr>
-            <td>TN SO 000015</td>
+            <td class="tb-label-strong">TN SO 000015</td>
             <td>Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac</td>
             <td>Schneider Electric</td>
             <td>THB 880</td>
             <td>30%</td>
             <td>THB 660</td>
-            <td>16</td>
+            <td>16 <a class="tb-icon-action" href="javascript:;"><span class="icon nimbl3-icon_edit"></span></a></td>
             <td>THB 50,079,8823</td>
-            <td>Remove Item</td>
+            <td>
+              <a class="tb-label-action" href="javascript:;">Remove Item</a>
+            </td>
           </tr>
           <tr>
-            <td>TN SO 000015</td>
+            <td class="tb-label-strong">TN SO 000015</td>
             <td>Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac</td>
             <td>Schneider Electric</td>
             <td>THB 880</td>
             <td>30%</td>
             <td>THB 660</td>
-            <td>16</td>
+            <td>16 <a class="tb-icon-action" href="javascript:;"><span class="icon nimbl3-icon_edit"></span></a></td>
             <td>THB 50,079,8823</td>
-            <td>Remove Item</td>
+            <td>
+              <a class="tb-label-action" href="javascript:;">Remove Item</a>
+            </td>
           </tr>
           <tr>
-            <td>TN SO 000015</td>
+            <td class="tb-label-strong">TN SO 000015</td>
             <td>Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac</td>
             <td>Schneider Electric</td>
             <td>THB 880</td>
             <td>30%</td>
             <td>THB 660</td>
-            <td>16</td>
+            <td>16 <a class="tb-icon-action" href="javascript:;"><span class="icon nimbl3-icon_edit"></span></a></td>
             <td>THB 50,079,8823</td>
-            <td>Remove Item</td>
+            <td>
+              <a class="tb-label-action" href="javascript:;">Remove Item</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="tb-label-strong">TN SO 000015</td>
+            <td>Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac</td>
+            <td>Schneider Electric</td>
+            <td>
+              <a class="tb-label-action tb-label-red" href="javascript:;">Set Price</a>
+            </td>
+            <td>30%</td>
+            <td>
+              <a class="tb-label-action tb-label-red" href="javascript:;">Set Price</a>
+            </td>
+            <td>16 <a class="tb-icon-action" href="javascript:;"><span class="icon nimbl3-icon_edit"></span></a></td>
+            <td>
+              <a class="tb-label-action tb-label-red" href="javascript:;">Set Price</a>
+            </td>
+            <td><a class="tb-label-action" href="javascript:;">Remove Item</a></td>
+          </tr>
+          <tr>
+            <td class="tb-label-strong">TN SO 000015</td>
+            <td>Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac</td>
+            <td>Schneider Electric</td>
+            <td>THB 880</td>
+            <td>30%</td>
+            <td>THB 660</td>
+            <td>16 <a class="tb-icon-action" href="javascript:;"><span class="icon nimbl3-icon_edit"></span></a></td>
+            <td>THB 50,079,8823</td>
+            <td>
+              <a class="tb-label-action" href="javascript:;">Remove Item</a>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
 
+    <!-- remark box -->
     <h3>Remarks</h3>
     <div class="box">
       When you enter into any new area of science, you almost always find yourself with a baffling new language of technical terms to learn before you can converse with the experts. This is certainly true in astronomy both in terms of terms that refer to the cosmos and terms that describe the tools of the trade, the most prevalent being the telescope. So to get us off of first base, let’s define some of the key terms that pertain to telescopes to help you be able to talk to them more intelligently.
+    </div>
+
+    <div class="spacing-area"></div>
+
+    <!-- price summarize floating box -->
+    <div id="price-summarize-container" class="box">
+      <div class="price-summarize-wrapper">
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Estimated Delivery Date</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal-length" type="text" value="14-10-2016" readonly>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Sub-total</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <span class="field-text is-normal is-pulled-right">40,033</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Shipping</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal-length" type="text" value="0" readonly>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Special Discount</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal-length" type="text" value="9,999.999" readonly>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Tax</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input class="input is-short-length" type="text" value="7">
+                <span class="field-text is-normal">%  1,826.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="field is-horizontal summarize-line">
+          <div class="field-label is-medium">
+            <label class="label">Total</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <span class="field-text is-large is-pulled-right">THB 41,585.31</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
