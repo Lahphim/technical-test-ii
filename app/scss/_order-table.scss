@@ -6,6 +6,8 @@ $table-text-red-color: #CD171A;
 $table-border-color: #C9C9C9;
 $arrow-color: #C9C9C9;
 
+#order-list-container { overflow-y: scroll; }
+
 #order-list {
   margin-bottom: 0;
   font-size: 11px;
@@ -55,9 +57,10 @@ table {
     color: $table-text-red-color;
   }
   .tb-icon-action {
-    position: absolute;
+    position: relative;
     display: inline-block;
-    margin-top: -10px;
+    margin-top: -22px;
+    margin-left: 10px;
     transform: scale((16/32));
   }
 }
@@ -69,6 +72,13 @@ table {
         padding-top: 22px;
         padding-bottom: 22px;
       }
+    }
+  }
+
+  table {
+    .tb-icon-action {
+      position: absolute;
+      margin-top: -10px;
     }
   }
 }

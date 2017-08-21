@@ -73,7 +73,7 @@ h3 {
   margin-bottom: 7px; }
 
 #content-pane {
-  margin: 34px; }
+  padding: 34px; }
 
 @media screen and (max-width: 800px) {
   .is-responsive {
@@ -276,6 +276,9 @@ h3 {
     text-decoration: underline;
     color: inherit; }
 
+#order-list-container {
+  overflow-y: scroll; }
+
 #order-list {
   margin-bottom: 0;
   font-size: 11px;
@@ -317,16 +320,20 @@ table .tb-label-red {
   color: #CD171A; }
 
 table .tb-icon-action {
-  position: absolute;
+  position: relative;
   display: inline-block;
-  margin-top: -10px;
+  margin-top: -22px;
+  margin-left: 10px;
   -webkit-transform: scale(0.5);
   transform: scale(0.5); }
 
 @media screen and (max-width: 800px) {
   #order-list.table th {
     padding-top: 22px;
-    padding-bottom: 22px; } }
+    padding-bottom: 22px; }
+  table .tb-icon-action {
+    position: absolute;
+    margin-top: -10px; } }
 
 .label {
   color: #626272; }
@@ -472,4 +479,4 @@ table .tb-icon-action {
 
 @media screen and (max-width: 768px) {
   #content-pane {
-    margin: 0px; } }
+    padding: 0px; } }
