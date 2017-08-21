@@ -1,0 +1,32 @@
+$navbar-bg-color: #702283;
+$navbar-icon-color: #EB8B2D;
+
+#sticky-navbar {
+  display: none;
+  background-color: $navbar-bg-color;
+  position: relative;
+  z-index: 1;
+
+  .nvb-detail {
+    font-family: "Montserrat Light";
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+  }
+
+  .navbar-item {
+    transition: background-color 0.2s;
+
+    i {
+      color: $navbar-icon-color;
+
+    }
+
+    &:hover i, &:active i {
+      color: $navbar-bg-color;
+    }
+  }
+}

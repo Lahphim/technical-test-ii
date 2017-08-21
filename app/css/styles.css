@@ -506,6 +506,33 @@ table .tb-icon-action {
     -webkit-box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.11), 0 2px 3px 0 rgba(98, 98, 114, 0.21);
     box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.11), 0 2px 3px 0 rgba(98, 98, 114, 0.21); } }
 
+#sticky-navbar {
+  display: none;
+  background-color: #702283;
+  position: relative;
+  z-index: 1; }
+  #sticky-navbar .nvb-detail {
+    font-family: "Montserrat Light";
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 16px;
+    color: white; }
+  #sticky-navbar .navbar-item {
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s; }
+    #sticky-navbar .navbar-item i {
+      color: #EB8B2D; }
+    #sticky-navbar .navbar-item:hover i, #sticky-navbar .navbar-item:active i {
+      color: #702283; }
+
 @media screen and (max-width: 768px) {
   #content-pane {
     padding: 0px; } }
