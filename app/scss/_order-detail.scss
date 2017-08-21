@@ -5,6 +5,7 @@ $lv-separator-color: #ADB3B9;
   .level, .level-left {
     .level-item {
       position: relative;
+
       .headline {
         color: $lv-label-color;
         font-weight: 700;
@@ -14,6 +15,12 @@ $lv-separator-color: #ADB3B9;
       .headline-big {
         color: $lv-label-color;
         font-size: 16px;
+        font-weight: 700;
+      }
+
+      .headline-bigest {
+        color: $lv-label-color;
+        font-size: 24px;
         font-weight: 700;
       }
 
@@ -30,3 +37,20 @@ $lv-separator-color: #ADB3B9;
     }
   }
 }
+
+#alter-filter-container {
+  display: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: transparent;
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .box-wrapper { width: 100%; }
+
+  #filter-container {
+    box-shadow: 0 -1px 3px 0 rgba(0,0,0,0.11), 0 2px 3px 0 rgba(98,98,114,0.21);
+  }
+}
+

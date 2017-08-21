@@ -3,10 +3,11 @@ $main-font-btn-color: #FBFBFB;
 
 $button-text-gray-color: #8899AA;
 
-//.action-btn-group {
-//  position: absolute;
-//  right: 0;
-//}
+.action-btn-group {
+  //position: absolute;
+  //right: 0;
+  margin-left: 19px;
+}
 
 .button {
   span[class*="nimbl3-"] {

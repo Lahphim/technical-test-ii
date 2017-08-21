@@ -16,6 +16,7 @@ h3 {
   margin: 34px;
 }
 
+@import "bulma-responsive-table";
 @import "sidebar";
 @import "breadcrumb";
 @import "box";
@@ -23,3 +24,9 @@ h3 {
 @import "order-table";
 @import "form";
 @import "order-detail";
+
+@media screen and (max-width: 768px) {
+  #content-pane {
+    margin: 0px;
+  }
+}

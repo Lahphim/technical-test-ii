@@ -12,7 +12,7 @@
 
 <div id="app-container" class="columns is-gapless is-marginless">
   <!-- sidebar section -->
-  <aside id="sidebar-pane" class="menu column is-2">
+  <aside id="sidebar-pane" class="menu column is-3-tablet is-2-desktop">
     <div class="menu-logo">
       <span class="icon nimbl3-logo-white"></span>
     </div>
@@ -99,9 +99,9 @@
     </div>
   </aside>
 
-  <div id="content-pane" class="container column">
+  <div id="content-pane" class="container column is-9-tablet is-10-desktop is-paddingless-">
     <!-- order breadcrumb section -->
-    <nav class="breadcrumb is-large" aria-label="breadcrumbs">
+    <nav class="breadcrumb is-large is-hidden-mobile" aria-label="breadcrumbs">
       <ul>
         <li>
           <a href="javascript:;">Orders</a>
@@ -118,7 +118,7 @@
         <div id="filter-container" class="box">
           <div class="columns">
             <div class="column is-5">
-              <div class="level-left">
+              <div class="level-left is-hidden-mobile">
                 <div class="level-item">
                   <div>
                     <h2 class="headline-big">CPF Saraburi</h2>
@@ -127,45 +127,60 @@
                   </div>
                 </div>
               </div>
+
+              <div class="level is-block-mobile" style="display: none;">
+                <div class="level-item has-text-centered">
+                  <div>
+                    <h1 class="headline-bigest">CPF Saraburi</h1>
+                    <p>Highway 2, Kaeng Khoi Saraburi Thailand</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="column">
+            <div class="column is-hidden-mobile">
               <div class="level">
-                <div class="level-item has-text-centered">
-                  <div>
+                <div class="level-item has-text-centered has-text-left-mobile">
+                  <div class="box-wrapper">
                     <p class="headline">Type</p>
-                    <p class="title">
-                      <div class="select">
-                        <select>
-                          <option>Retailers</option>
-                        </select>
+                    <div class="field">
+                      <div class="control">
+                        <div class="select is-fullwidth">
+                          <select>
+                            <option>Retailers</option>
+                          </select>
+                        </div>
                       </div>
-                    </p>
+                    </div>
                   </div>
                 </div>
 
-                <div class="level-item has-text-centered">
-                  <div>
+                <div class="level-item has-text-centered has-text-left-mobile">
+                  <div class="box-wrapper">
                     <p class="headline">Owned By</p>
-                    <p class="title">
-                    <div class="select">
-                      <select>
-                        <option>Tom Hanks</option>
-                      </select>
+                    <div class="field">
+                      <div class="control">
+                        <div class="select is-fullwidth">
+                          <select>
+                            <option>Tom Hanks</option>
+                          </select>
+                        </div>
+                      </div>
                     </div>
-                    </p>
                   </div>
                 </div>
 
-                <div class="level-item has-text-centered">
-                  <div>
+                <div class="level-item has-text-centered has-text-left-mobile">
+                  <div class="box-wrapper">
                     <p class="headline">Status</p>
-                    <p class="title">
-                    <div class="select">
-                      <select>
-                        <option>Pending</option>
-                      </select>
+                    <div class="field">
+                      <div class="control">
+                        <div class="select is-fullwidth">
+                          <select>
+                            <option>Pending</option>
+                          </select>
+                        </div>
+                      </div>
                     </div>
-                    </p>
                   </div>
                 </div>
               </div>
@@ -173,9 +188,10 @@
           </div>
         </div>
       </div>
+
       <div class="column is-gapless">
         <div class="action-btn-group field is-grouped">
-          <p class="control">
+          <p class="control is-hidden-mobile">
             <a class="button is-action-btn is-trans-btn">
               Cancel
             </a>
@@ -189,8 +205,127 @@
       </div>
     </div>
 
+    <div id="alter-filter-container" class="box is-block-mobile">
+      <div class="level">
+        <div class="level-item has-text-centered has-text-left-mobile">
+          <div class="box-wrapper">
+            <p class="headline">Owned By</p>
+            <div class="field">
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select>
+                    <option>Tom Hanks</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="level-item has-text-centered has-text-left-mobile">
+          <div class="box-wrapper">
+            <p class="headline">Status</p>
+            <div class="field">
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select>
+                    <option>Pending</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="is-block-mobile" style="display: none">
+
+    <!-- price summarize floating box -->
+    <div id="price-summarize-container" class="box">
+      <div class="price-summarize-wrapper">
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Estimated Delivery Date</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal-length" type="text" value="14-10-2016" readonly>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Sub-total</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <span class="field-text is-normal is-pulled-right">40,033</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Shipping</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal-length" type="text" value="0" readonly>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Special Discount</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal-length" type="text" value="9,999.999" readonly>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Tax</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input class="input is-short-length" type="text" value="7">
+                <span class="field-text is-normal">%  1,826.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="field is-horizontal summarize-line">
+          <div class="field-label is-medium">
+            <label class="label">Total</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <span class="field-text is-large is-pulled-right">THB 41,585.31</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="is-block-mobile" style="display: none">
+
     <!-- add product action section -->
-    <div class="box is-paddingless">
+    <div id="add-product-container" class="box is-paddingless">
       <a class="button is-action-btn is-trans-btn bt-label-gray" href="javascript:;">
         <span class="icon nimbl3-icon_plus"></span>
         <span>Add Products</span>
@@ -199,7 +334,7 @@
 
     <!-- order list table -->
     <div class="box is-paddingless">
-      <table id="order-list" class="table is-striped is-fullwidth">
+      <table id="order-list" class="table is-striped is-fullwidth is-responsive">
         <thead>
           <tr>
             <th>sku <span class="triangle-arrow-down"></span></th>
@@ -288,93 +423,13 @@
     </div>
 
     <!-- remark box -->
-    <h3>Remarks</h3>
+    <h3 class="is-hidden-mobile">Remarks</h3>
     <div class="box">
+      <h3 class="is-block-mobile" style="display: none;">Remarks</h3>
       When you enter into any new area of science, you almost always find yourself with a baffling new language of technical terms to learn before you can converse with the experts. This is certainly true in astronomy both in terms of terms that refer to the cosmos and terms that describe the tools of the trade, the most prevalent being the telescope. So to get us off of first base, let’s define some of the key terms that pertain to telescopes to help you be able to talk to them more intelligently.
     </div>
 
-    <div class="spacing-area"></div>
-
-    <!-- price summarize floating box -->
-    <div id="price-summarize-container" class="box">
-      <div class="price-summarize-wrapper">
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label">Estimated Delivery Date</label>
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <input class="input is-normal-length" type="text" value="14-10-2016" readonly>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label">Sub-total</label>
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <span class="field-text is-normal is-pulled-right">40,033</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label">Shipping</label>
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <input class="input is-normal-length" type="text" value="0" readonly>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label">Special Discount</label>
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <input class="input is-normal-length" type="text" value="9,999.999" readonly>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label">Tax</label>
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <input class="input is-short-length" type="text" value="7">
-                <span class="field-text is-normal">%  1,826.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <div class="field is-horizontal summarize-line">
-          <div class="field-label is-medium">
-            <label class="label">Total</label>
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <span class="field-text is-large is-pulled-right">THB 41,585.31</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="spacing-area is-hidden-mobile"></div>
   </div>
 </div>
 

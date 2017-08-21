@@ -61,3 +61,14 @@ table {
     transform: scale((16/32));
   }
 }
+
+@media screen and (max-width: 800px) {
+  #order-list {
+    &.table {
+      th {
+        padding-top: 22px;
+        padding-bottom: 22px;
+      }
+    }
+  }
+}
