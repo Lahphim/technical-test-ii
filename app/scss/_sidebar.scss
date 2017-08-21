@@ -8,7 +8,8 @@ $list-active-bg: #5C1F73;
 $list-active-border: #4C1367;
 $list-active-bar: #65B32E;
 
-
+$user-name-color: #DF542A;
+$user-company-color: #626272;
 
 #sidebar-pane {
   position: relative;
@@ -34,6 +35,23 @@ $list-active-bar: #65B32E;
     padding-bottom: 22px;
 
     span { transform: scale(0.9); }
+  }
+
+  .user-detail {
+    display: none;
+    background-color: white;
+    padding: 10px 17px;
+
+    .user-name {
+      font-size: 14px;
+      color: $user-name-color;
+    }
+
+    .user-company {
+      font-size: 11px;
+      color: $user-company-color;
+      font-weight: bold;
+    }
   }
 }
 

@@ -75,6 +75,22 @@ h3 {
 #content-pane {
   padding: 34px; }
 
+.powerby-logo-footer {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #702283; }
+  .powerby-logo-footer span {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); }
+
 @media screen and (max-width: 800px) {
   .is-responsive {
     width: 100%;
@@ -167,6 +183,17 @@ h3 {
     #sidebar-pane .powerby-logo span {
       -webkit-transform: scale(0.9);
       transform: scale(0.9); }
+  #sidebar-pane .user-detail {
+    display: none;
+    background-color: white;
+    padding: 10px 17px; }
+    #sidebar-pane .user-detail .user-name {
+      font-size: 14px;
+      color: #DF542A; }
+    #sidebar-pane .user-detail .user-company {
+      font-size: 11px;
+      color: #626272;
+      font-weight: bold; }
 
 #sidebar-list .sidebar-list-item .icon {
   -webkit-transform: scale(0.53125);
@@ -437,7 +464,9 @@ table .tb-icon-action {
   #add-product-container {
     border: 0;
     -webkit-box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.12);
-    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.12); } }
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.12); }
+  .spacing-area {
+    height: 80px; } }
 
 #filter-container .level .level-item, #filter-container .level-left .level-item {
   position: relative; }

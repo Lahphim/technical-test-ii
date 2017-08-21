@@ -16,6 +16,18 @@ h3 {
   padding: 34px;
 }
 
+.powerby-logo-footer {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #702283;
+
+  span { transform: scale(0.9); }
+}
+
 @import "bulma-responsive-table";
 @import "sidebar";
 @import "breadcrumb";
