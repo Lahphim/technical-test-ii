@@ -6,6 +6,12 @@ body {
   background-color: #F4F7F8;
 }
 
+#app-container {
+  height: auto;
+  min-height: 100%;
+  position: relative;
+}
+
 h3 {
   font-size: 12px;
   color: #333;

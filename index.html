@@ -7,12 +7,15 @@
   <link rel="stylesheet" href="/app/css/bulma.css">
   <link rel="stylesheet" href="/app/css/styles.css">
   <link rel="stylesheet" href="/app/css/sprite.css">
-</head>
-<body>
 
-<div id="app-container" class="columns is-gapless is-marginless">
+  <script src="/app/js/jquery.js"></script>
+  <script src="/app/js/main.js"></script>
+</head>
+<body class="aside-show">
+
+<div id="app-container" class="is-gapless is-marginless">
   <!-- sidebar section -->
-  <aside id="sidebar-pane" class="menu column is-3-tablet is-2-desktop">
+  <aside id="sidebar-pane" class="menu">
     <div class="menu-logo">
       <span class="icon nimbl3-logo-white"></span>
     </div>
@@ -103,102 +106,153 @@
       <span class="icon nimbl3-powerby"></span>
     </div>
   </aside>
+  <div class="aside-overlay"></div>
 
-  <nav id="sticky-navbar" class="navbar is-block-mobile">
-    <div class="navbar-brand">
-      <!-- navbar items, nav burger ... -->
-      <a href="javascript:;" class="navbar-item">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-      </a>
-      <p class="nvb-detail">Edit ORD07070707</p>
-      <a href="javascript:;" class="navbar-item">
-        <i class="fa fa-search" aria-hidden="true"></i>
-      </a>
-    </div>
-  </nav>
-
-  <div id="content-pane" class="container column is-9-tablet is-10-desktop is-paddingless-">
-    <!-- order breadcrumb section -->
-    <nav class="breadcrumb is-large is-hidden-mobile" aria-label="breadcrumbs">
-      <ul>
-        <li>
-          <a href="javascript:;">Orders</a>
-        </li>
-        <li class="is-active">
-          <a href="" aria-current="page">TN SO 000015</a>
-        </li>
-      </ul>
+  <div class="landing-wrapper">
+    <nav id="sticky-navbar" class="navbar is-block-mobile">
+      <div class="navbar-brand">
+        <!-- navbar items, nav burger ... -->
+        <a id="toggle-sidebar-btn" href="javascript:;" class="navbar-item">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </a>
+        <p class="nvb-detail">Edit ORD07070707</p>
+        <a href="javascript:;" class="navbar-item">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </a>
+      </div>
     </nav>
 
-    <!-- order detail section -->
-    <div class="columns is-desktop">
-      <div class="column is-12-tablet is-8-desktop">
-        <div id="filter-container" class="box">
-          <div class="columns is-desktop">
-            <div class="column is-3-tablet is-4-desktop">
-              <div class="level-left is-hidden-mobile">
-                <div class="level-item" style="width: 100%;">
-                  <div>
-                    <h2 class="headline-big">CPF Saraburi</h2>
-                    <p>Highway 2, Kaeng Khoi Saraburi Thailand</p>
-                    <p><b>+66 087 348 79 34</b></p>
-                  </div>
-                </div>
-              </div>
+    <div id="content-pane" class="container column is-12 is-paddingless-">
+      <!-- order breadcrumb section -->
+      <nav class="breadcrumb is-large is-hidden-mobile" aria-label="breadcrumbs">
+        <ul>
+          <li>
+            <a href="javascript:;">Orders</a>
+          </li>
+          <li class="is-active">
+            <a href="" aria-current="page">TN SO 000015</a>
+          </li>
+        </ul>
+      </nav>
 
-              <div class="level is-block-mobile" style="display: none;">
-                <div class="level-item has-text-centered">
-                  <div>
-                    <h1 class="headline-bigest">CPF Saraburi</h1>
-                    <p>Highway 2, Kaeng Khoi Saraburi Thailand</p>
+      <!-- order detail section -->
+      <div class="columns is-desktop">
+        <div class="column is-12-tablet is-8-desktop">
+          <div id="filter-container" class="box">
+            <div class="columns is-desktop">
+              <div class="column is-3-tablet is-4-desktop">
+                <div class="level-left is-hidden-mobile">
+                  <div class="level-item" style="width: 100%;">
+                    <div>
+                      <h2 class="headline-big">CPF Saraburi</h2>
+                      <p>Highway 2, Kaeng Khoi Saraburi Thailand</p>
+                      <p><b>+66 087 348 79 34</b></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="level is-block-mobile" style="display: none;">
+                  <div class="level-item has-text-centered">
+                    <div>
+                      <h1 class="headline-bigest">CPF Saraburi</h1>
+                      <p>Highway 2, Kaeng Khoi Saraburi Thailand</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="column is-hidden-mobile">
-              <div class="level">
-                <div class="level-item has-text-centered has-text-left-mobile">
-                  <div class="box-wrapper">
-                    <p class="headline">Type</p>
-                    <div class="field">
-                      <div class="control">
-                        <div class="select is-fullwidth">
-                          <select>
-                            <option>Retailers</option>
-                          </select>
+              <div class="column is-hidden-mobile">
+                <div class="level">
+                  <div class="level-item has-text-centered has-text-left-mobile">
+                    <div class="box-wrapper">
+                      <p class="headline">Type</p>
+                      <div class="field">
+                        <div class="control">
+                          <div class="select is-fullwidth">
+                            <select>
+                              <option>Retailers</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="level-item has-text-centered has-text-left-mobile">
+                    <div class="box-wrapper">
+                      <p class="headline">Owned By</p>
+                      <div class="field">
+                        <div class="control">
+                          <div class="select is-fullwidth">
+                            <select>
+                              <option>Tom Hanks</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="level-item has-text-centered has-text-left-mobile">
+                    <div class="box-wrapper">
+                      <p class="headline">Status</p>
+                      <div class="field">
+                        <div class="control">
+                          <div class="select is-fullwidth">
+                            <select>
+                              <option>Pending</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <div class="level-item has-text-centered has-text-left-mobile">
-                  <div class="box-wrapper">
-                    <p class="headline">Owned By</p>
-                    <div class="field">
-                      <div class="control">
-                        <div class="select is-fullwidth">
-                          <select>
-                            <option>Tom Hanks</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
+        <div class="column is-12-tablet is-4-desktop is-gapless">
+          <div class="action-btn-group field is-grouped">
+            <p class="control is-hidden-mobile">
+              <a class="button is-action-btn is-trans-btn">
+                Cancel
+              </a>
+            </p>
+            <p class="control">
+              <a class="button is-action-btn is-solid-btn">
+                Update Order
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="alter-filter-container" class="box is-block-mobile">
+        <div class="level">
+          <div class="level-item has-text-centered has-text-left-mobile">
+            <div class="box-wrapper">
+              <p class="headline">Owned By</p>
+              <div class="field">
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select>
+                      <option>Tom Hanks</option>
+                    </select>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
 
-                <div class="level-item has-text-centered has-text-left-mobile">
-                  <div class="box-wrapper">
-                    <p class="headline">Status</p>
-                    <div class="field">
-                      <div class="control">
-                        <div class="select is-fullwidth">
-                          <select>
-                            <option>Pending</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
+          <div class="level-item has-text-centered has-text-left-mobile">
+            <div class="box-wrapper">
+              <p class="headline">Status</p>
+              <div class="field">
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select>
+                      <option>Pending</option>
+                    </select>
                   </div>
                 </div>
               </div>
@@ -207,249 +261,201 @@
         </div>
       </div>
 
-      <div class="column is-12-tablet is-4-desktop is-gapless">
-        <div class="action-btn-group field is-grouped">
-          <p class="control is-hidden-mobile">
-            <a class="button is-action-btn is-trans-btn">
-              Cancel
-            </a>
-          </p>
-          <p class="control">
-            <a class="button is-action-btn is-solid-btn">
-              Update Order
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div id="alter-filter-container" class="box is-block-mobile">
-      <div class="level">
-        <div class="level-item has-text-centered has-text-left-mobile">
-          <div class="box-wrapper">
-            <p class="headline">Owned By</p>
-            <div class="field">
-              <div class="control">
-                <div class="select is-fullwidth">
-                  <select>
-                    <option>Tom Hanks</option>
-                  </select>
+      <hr class="is-block-mobile" style="display: none">
+
+      <!-- price summarize floating box -->
+      <div id="price-summarize-container" class="box">
+        <div class="price-summarize-wrapper">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Estimated Delivery Date</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <input class="input is-normal-length" type="text" value="14-10-2016" readonly>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Sub-total</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <span class="field-text is-normal is-pulled-right">40,033</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Shipping</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <input class="input is-normal-length" type="text" value="0" readonly>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Special Discount</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <input class="input is-normal-length" type="text" value="9,999.999" readonly>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Tax</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <input class="input is-short-length" type="text" value="7">
+                  <span class="field-text is-normal">%  1,826.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="field is-horizontal summarize-line">
+            <div class="field-label is-medium">
+              <label class="label">Total</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <span class="field-text is-large is-pulled-right">THB 41,585.31</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="level-item has-text-centered has-text-left-mobile">
-          <div class="box-wrapper">
-            <p class="headline">Status</p>
-            <div class="field">
-              <div class="control">
-                <div class="select is-fullwidth">
-                  <select>
-                    <option>Pending</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
 
-    <hr class="is-block-mobile" style="display: none">
+      <hr class="is-block-mobile" style="display: none">
 
-    <!-- price summarize floating box -->
-    <div id="price-summarize-container" class="box">
-      <div class="price-summarize-wrapper">
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label">Estimated Delivery Date</label>
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <input class="input is-normal-length" type="text" value="14-10-2016" readonly>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label">Sub-total</label>
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <span class="field-text is-normal is-pulled-right">40,033</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label">Shipping</label>
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <input class="input is-normal-length" type="text" value="0" readonly>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label">Special Discount</label>
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <input class="input is-normal-length" type="text" value="9,999.999" readonly>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label">Tax</label>
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <input class="input is-short-length" type="text" value="7">
-                <span class="field-text is-normal">%  1,826.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <div class="field is-horizontal summarize-line">
-          <div class="field-label is-medium">
-            <label class="label">Total</label>
-          </div>
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <span class="field-text is-large is-pulled-right">THB 41,585.31</span>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- add product action section -->
+      <div id="add-product-container" class="box is-paddingless">
+        <a class="button is-action-btn is-trans-btn bt-label-gray" href="javascript:;">
+          <span class="icon nimbl3-icon_plus"></span>
+          <span>Add Products</span>
+        </a>
       </div>
-    </div>
 
-    <hr class="is-block-mobile" style="display: none">
+      <!-- order list table -->
+      <div id="order-list-container" class="box is-paddingless">
+        <table id="order-list" class="table is-striped is-fullwidth is-responsive">
+          <thead>
+            <tr>
+              <th>sku <span class="triangle-arrow-down"></span></th>
+              <th>description</th>
+              <th>brand</th>
+              <th>list price</th>
+              <th>discount</th>
+              <th>net price</th>
+              <th>qty</th>
+              <th>total</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tb-label-strong">TN SO 000015</td>
+              <td>Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac</td>
+              <td>Schneider Electric</td>
+              <td>THB 880</td>
+              <td>30%</td>
+              <td>THB 660</td>
+              <td>16 <a class="tb-icon-action" href="javascript:;"><span class="icon nimbl3-icon_edit"></span></a></td>
+              <td>THB 50,079,8823</td>
+              <td>
+                <a class="tb-label-action" href="javascript:;">Remove Item</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="tb-label-strong">TN SO 000015</td>
+              <td>Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac</td>
+              <td>Schneider Electric</td>
+              <td>THB 880</td>
+              <td>30%</td>
+              <td>THB 660</td>
+              <td>16 <a class="tb-icon-action" href="javascript:;"><span class="icon nimbl3-icon_edit"></span></a></td>
+              <td>THB 50,079,8823</td>
+              <td>
+                <a class="tb-label-action" href="javascript:;">Remove Item</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="tb-label-strong">TN SO 000015</td>
+              <td>Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac</td>
+              <td>Schneider Electric</td>
+              <td>THB 880</td>
+              <td>30%</td>
+              <td>THB 660</td>
+              <td>16 <a class="tb-icon-action" href="javascript:;"><span class="icon nimbl3-icon_edit"></span></a></td>
+              <td>THB 50,079,8823</td>
+              <td>
+                <a class="tb-label-action" href="javascript:;">Remove Item</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="tb-label-strong">TN SO 000015</td>
+              <td>Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac</td>
+              <td>Schneider Electric</td>
+              <td>
+                <a class="tb-label-action tb-label-red" href="javascript:;">Set Price</a>
+              </td>
+              <td>30%</td>
+              <td>
+                <a class="tb-label-action tb-label-red" href="javascript:;">Set Price</a>
+              </td>
+              <td>16 <a class="tb-icon-action" href="javascript:;"><span class="icon nimbl3-icon_edit"></span></a></td>
+              <td>
+                <a class="tb-label-action tb-label-red" href="javascript:;">Set Price</a>
+              </td>
+              <td><a class="tb-label-action" href="javascript:;">Remove Item</a></td>
+            </tr>
+            <tr>
+              <td class="tb-label-strong">TN SO 000015</td>
+              <td>Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac</td>
+              <td>Schneider Electric</td>
+              <td>THB 880</td>
+              <td>30%</td>
+              <td>THB 660</td>
+              <td>16 <a class="tb-icon-action" href="javascript:;"><span class="icon nimbl3-icon_edit"></span></a></td>
+              <td>THB 50,079,8823</td>
+              <td>
+                <a class="tb-label-action" href="javascript:;">Remove Item</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <!-- add product action section -->
-    <div id="add-product-container" class="box is-paddingless">
-      <a class="button is-action-btn is-trans-btn bt-label-gray" href="javascript:;">
-        <span class="icon nimbl3-icon_plus"></span>
-        <span>Add Products</span>
-      </a>
-    </div>
+      <!-- remark box -->
+      <h3 class="is-hidden-mobile">Remarks</h3>
+      <div class="box">
+        <h3 class="is-block-mobile" style="display: none;">Remarks</h3>
+        When you enter into any new area of science, you almost always find yourself with a baffling new language of technical terms to learn before you can converse with the experts. This is certainly true in astronomy both in terms of terms that refer to the cosmos and terms that describe the tools of the trade, the most prevalent being the telescope. So to get us off of first base, let’s define some of the key terms that pertain to telescopes to help you be able to talk to them more intelligently.
+      </div>
 
-    <!-- order list table -->
-    <div id="order-list-container" class="box is-paddingless">
-      <table id="order-list" class="table is-striped is-fullwidth is-responsive">
-        <thead>
-          <tr>
-            <th>sku <span class="triangle-arrow-down"></span></th>
-            <th>description</th>
-            <th>brand</th>
-            <th>list price</th>
-            <th>discount</th>
-            <th>net price</th>
-            <th>qty</th>
-            <th>total</th>
-            <th>&nbsp;</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="tb-label-strong">TN SO 000015</td>
-            <td>Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac</td>
-            <td>Schneider Electric</td>
-            <td>THB 880</td>
-            <td>30%</td>
-            <td>THB 660</td>
-            <td>16 <a class="tb-icon-action" href="javascript:;"><span class="icon nimbl3-icon_edit"></span></a></td>
-            <td>THB 50,079,8823</td>
-            <td>
-              <a class="tb-label-action" href="javascript:;">Remove Item</a>
-            </td>
-          </tr>
-          <tr>
-            <td class="tb-label-strong">TN SO 000015</td>
-            <td>Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac</td>
-            <td>Schneider Electric</td>
-            <td>THB 880</td>
-            <td>30%</td>
-            <td>THB 660</td>
-            <td>16 <a class="tb-icon-action" href="javascript:;"><span class="icon nimbl3-icon_edit"></span></a></td>
-            <td>THB 50,079,8823</td>
-            <td>
-              <a class="tb-label-action" href="javascript:;">Remove Item</a>
-            </td>
-          </tr>
-          <tr>
-            <td class="tb-label-strong">TN SO 000015</td>
-            <td>Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac</td>
-            <td>Schneider Electric</td>
-            <td>THB 880</td>
-            <td>30%</td>
-            <td>THB 660</td>
-            <td>16 <a class="tb-icon-action" href="javascript:;"><span class="icon nimbl3-icon_edit"></span></a></td>
-            <td>THB 50,079,8823</td>
-            <td>
-              <a class="tb-label-action" href="javascript:;">Remove Item</a>
-            </td>
-          </tr>
-          <tr>
-            <td class="tb-label-strong">TN SO 000015</td>
-            <td>Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac</td>
-            <td>Schneider Electric</td>
-            <td>
-              <a class="tb-label-action tb-label-red" href="javascript:;">Set Price</a>
-            </td>
-            <td>30%</td>
-            <td>
-              <a class="tb-label-action tb-label-red" href="javascript:;">Set Price</a>
-            </td>
-            <td>16 <a class="tb-icon-action" href="javascript:;"><span class="icon nimbl3-icon_edit"></span></a></td>
-            <td>
-              <a class="tb-label-action tb-label-red" href="javascript:;">Set Price</a>
-            </td>
-            <td><a class="tb-label-action" href="javascript:;">Remove Item</a></td>
-          </tr>
-          <tr>
-            <td class="tb-label-strong">TN SO 000015</td>
-            <td>Magnetic contactor - 9A (5.5 kW\, 7.5 HP)\, control voltage 230 Vac</td>
-            <td>Schneider Electric</td>
-            <td>THB 880</td>
-            <td>30%</td>
-            <td>THB 660</td>
-            <td>16 <a class="tb-icon-action" href="javascript:;"><span class="icon nimbl3-icon_edit"></span></a></td>
-            <td>THB 50,079,8823</td>
-            <td>
-              <a class="tb-label-action" href="javascript:;">Remove Item</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="spacing-area"></div>
 
-    <!-- remark box -->
-    <h3 class="is-hidden-mobile">Remarks</h3>
-    <div class="box">
-      <h3 class="is-block-mobile" style="display: none;">Remarks</h3>
-      When you enter into any new area of science, you almost always find yourself with a baffling new language of technical terms to learn before you can converse with the experts. This is certainly true in astronomy both in terms of terms that refer to the cosmos and terms that describe the tools of the trade, the most prevalent being the telescope. So to get us off of first base, let’s define some of the key terms that pertain to telescopes to help you be able to talk to them more intelligently.
-    </div>
-
-    <div class="spacing-area"></div>
-
-    <div class="powerby-logo-footer is-flex-mobile">
-      <span class="icon nimbl3-powerby"></span>
+      <div class="powerby-logo-footer is-flex-mobile">
+        <span class="icon nimbl3-powerby"></span>
+      </div>
     </div>
   </div>
 </div>
