@@ -1,6 +1,6 @@
 # Technical Test
 
-[Preview](https://github.com/Lahphim/technical-test-ii)
+[Preview](https://lahphim.github.io/technical-test-ii/)
 
 ## Getting Started
 
