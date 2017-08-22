@@ -1,3 +1,5 @@
+$tablet-size: 768px;
+
 $table-hr-color: #626272;
 $table-text-color: #8899AA;
 $table-text-strong-color: #64707C;
@@ -16,16 +18,24 @@ $arrow-color: #C9C9C9;
   &.table {
     border-radius: 3px;
 
+    th,td {
+      border-color: $table-border-color;
+      padding: 20px 18px;
+      line-height: initial;
+    }
+
     th {
       font-family: "Montserrat Bold";
       font-size: 8px;
       text-transform: uppercase;
       border-width: 0 0 1px;
-    }
-    th,td {
-      border-color: $table-border-color;
-      padding: 20px 18px;
-      line-height: initial;
+      padding-top: 22px;
+      padding-bottom: 22px;
+
+      @media (min-width: $tablet-size) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
     }
   }
 }
@@ -57,28 +67,15 @@ table {
     color: $table-text-red-color;
   }
   .tb-icon-action {
-    position: relative;
+    position: absolute;
+    margin-top: -10px;
     display: inline-block;
-    margin-top: -22px;
     margin-left: 10px;
     transform: scale((16/32));
-  }
-}
 
-@media screen and (max-width: 800px) {
-  #order-list {
-    &.table {
-      th {
-        padding-top: 22px;
-        padding-bottom: 22px;
-      }
-    }
-  }
-
-  table {
-    .tb-icon-action {
-      position: absolute;
-      margin-top: -10px;
+    @media (min-width: $tablet-size) {
+      position: relative;
+      margin-top: -22px;
     }
   }
 }

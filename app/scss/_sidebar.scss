@@ -1,3 +1,5 @@
+$tablet-size: 768px;
+
 $panel-color: #6F2781;
 $panel-font-color: #D18EE2;
 
@@ -29,6 +31,10 @@ body {
     left: 0;
     z-index: 800;
     display: none;
+
+    @media (min-width: $tablet-size) {
+      display: none !important;
+    }
   }
 }
 
@@ -42,6 +48,7 @@ body {
   z-index: 810;
   top: 0;
   left: 0;
+  transform: translateX(-250px);
   transition: transform 0.2s;
 
   .menu-logo {
@@ -80,6 +87,10 @@ body {
       color: $user-company-color;
       font-weight: bold;
     }
+  }
+
+  @media (min-width: $tablet-size) {
+    transform: translateX(0px);
   }
 }
 
@@ -135,21 +146,9 @@ body {
 }
 
 .landing-wrapper {
-  margin-left: 250px;
-}
+  margin-left: 0px;
 
-@media screen and (max-width: 768px) {
-  #sidebar-pane {
-    transform: translateX(-250px);
-  }
-
-  .landing-wrapper {
-    margin-left: 0;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .aside-overlay {
-    display: none !important;
+  @media (min-width: $tablet-size) {
+    margin-left: 250px;
   }
 }

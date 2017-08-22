@@ -1,7 +1,12 @@
+$tablet-size: 768px;
+
 $lv-label-color: #626272;
 $lv-separator-color: #ADB3B9;
+$lv-box-shadow: rgba(98,98,114,0.21);
 
 #filter-container {
+  box-shadow: 0 -1px 3px 0 rgba(black,0.11), 0 2px 3px 0 $lv-box-shadow;
+
   .level, .level-left {
     .level-item {
       position: relative;
@@ -36,6 +41,10 @@ $lv-separator-color: #ADB3B9;
       &:first-child:before { display: none; }
     }
   }
+
+  @media (min-width: $tablet-size) {
+    box-shadow: none;
+  }
 }
 
 #alter-filter-container {
@@ -46,11 +55,11 @@ $lv-separator-color: #ADB3B9;
   border: none;
 }
 
-@media screen and (max-width: 768px) {
-  .box-wrapper { width: 100%; }
+.box-wrapper {
+  width: 100%;
 
-  #filter-container {
-    box-shadow: 0 -1px 3px 0 rgba(0,0,0,0.11), 0 2px 3px 0 rgba(98,98,114,0.21);
+  @media (min-width: $tablet-size) {
+    width: auto;
   }
 }
 

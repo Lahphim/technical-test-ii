@@ -1,5 +1,7 @@
 @import "font-face";
 
+$tablet-size: 768px;
+
 body {
   font-family: "Montserrat Regular";
   font-size: 14px;
@@ -19,7 +21,11 @@ h3 {
 }
 
 #content-pane {
-  padding: 34px;
+  padding: 0px;
+
+  @media (min-width: $tablet-size) {
+    padding: 34px;
+  }
 }
 
 .powerby-logo-footer {
@@ -43,9 +49,3 @@ h3 {
 @import "form";
 @import "order-detail";
 @import "navbar";
-
-@media screen and (max-width: 768px) {
-  #content-pane {
-    padding: 0px;
-  }
-}

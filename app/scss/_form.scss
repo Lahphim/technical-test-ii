@@ -1,8 +1,9 @@
+$tablet-size: 768px;
+
 $form-label-color: #626272;
 $form-text-color: #8899AA;
 $form-input-border-color: #8899AA;
 $form-input-value-color: #C9C9C9;
-
 $form-select-border-color: #C9C9C9;
 $form-select-value-color: #8899AA;
 
@@ -70,21 +71,20 @@ $form-select-value-color: #8899AA;
 }
 
 .spacing-area {
-  height: 200px;
+  height: 80px;
+
+  @media (min-width: $tablet-size) {
+    height: 200px;
+  }
 }
 
 #price-summarize-container {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: 320px;
+  position: initial;
+  width: 100%;
   margin-right: 34px;
   margin-bottom: 34px;
   border: 0;
   box-shadow: 0 2px 14px 0 rgba(black, 0.12);
-  z-index: 1;
-
-  .label { text-align: left; }
 
   input {
     &.is-short-length {
@@ -115,22 +115,26 @@ $form-select-value-color: #8899AA;
       flex-basis: 0;
     }
   }
+
+  .label { text-align: left; }
+
+  .field.is-horizontal { display: flex; }
+
+  @media (min-width: $tablet-size) {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 320px;
+  }
 }
 
-@media screen and (max-width: 768px) {
-  #price-summarize-container {
-    position: initial;
-    width: 100%;
+#add-product-container {
+  border-width: 0;
+  box-shadow: 0 2px 14px 0 rgba(black, 0.12);
 
-    .field.is-horizontal { display: flex; }
-  }
-
-  #add-product-container {
-    border: 0;
-    box-shadow: 0 2px 14px 0 rgba(black, 0.12);
-  }
-
-  .spacing-area {
-    height: 80px;
+  @media (min-width: $tablet-size) {
+    border-width: 1px;
+    box-shadow: none;
   }
 }
