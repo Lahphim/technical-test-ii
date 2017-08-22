@@ -24,6 +24,6 @@ npm start
 * [BrowserSync](https://www.browsersync.io/) - Used for synchronising browser in real-time
 
 
-## Authors
+## Author
 
-[Lahphim S. Arnon][linkedin]
+[Somsak Arnon](https://www.linkedin.com/in/lahphim/)
