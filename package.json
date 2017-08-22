@@ -13,6 +13,9 @@
     "url": "https://github.com/Lahphim/technical-test-ii/issues"
   },
   "homepage": "https://github.com/Lahphim/technical-test-ii#readme",
+  "scripts": {
+    "start": "gulp start"
+  },
   "dependencies": {
     "browser-sync": "2.18.13",
     "bulma": "0.5.1",

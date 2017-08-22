@@ -72,4 +72,5 @@ gulp.task('serve', function(){
   gulp.watch('./**/*.html').on('change', browserSync.reload);
 });
 
+gulp.task('start', ['third-party', 'styles', 'serve']);
 gulp.task('default', ['styles', 'serve']);
